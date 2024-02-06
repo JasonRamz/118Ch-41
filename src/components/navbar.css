@@ -1,0 +1,32 @@
+/* navbar.css */
+
+.navbar {
+    padding: 20px; /* Add some padding for spacing */
+    display: flex;
+    justify-content: space-evenly; /* Align items to the start and end */
+    align-items: center; /* Vertically center items */
+    background-color: #fef1e8;
+}
+
+/* Logo (assuming it's an image) */
+.navbar img {
+    max-height: 40px; /* Set the maximum height of the logo */
+}
+
+/* Navigation links */
+.navbar a {
+    text-decoration: none;
+    color:rgb(172, 130, 130); 
+    font-weight: bold;
+    transition: color 0.3s ease; /* Add a smooth transition for text color change */
+}
+
+.navbar a:hover {
+    color: #3498db; /* Change text color on hover */
+}
+.btn{
+    padding: 5px;
+}
+
+
+
