@@ -1,0 +1,52 @@
+*{
+    margin: 0px;
+    border: 0px;
+}
+
+.contact{
+    background-color: #ccb9ab;
+}
+h1 {
+    color: black;
+}
+
+h2 {
+    color: black;
+}
+
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: black;
+}
+
+.message{
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #f0e6f4;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: #080307;
+}
+
+button {
+    background-color: #000000;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff5c8d;
+}
+
+
