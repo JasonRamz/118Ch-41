@@ -1,0 +1,54 @@
+.create-user {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.create-user h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.create-user div {
+    margin-bottom: 15px;
+}
+
+.create-user label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.create-user input[type="text"],
+.create-user textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.create-user textarea {
+    resize: vertical;
+}
+
+.create-user button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+.create-user button:hover {
+    background-color: #0056b3;
+}
+
+.page {
+    margin-top: 50px;
+}

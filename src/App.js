@@ -3,7 +3,7 @@ import './App.css';
 import Navbar from './components/navbar';
 import Footer from './components/footer';
 import Home from './pages/home';
-import About from './pages/about';
+import Service from './pages/service';
 import Contact from './pages/contact';
 import Feed from './pages/feed';
 import CreateUser from './pages/createUser';
@@ -20,10 +20,10 @@ function App() {
         <Routes>
           <Route path="/" element={ <Home /> } />
           <Route path="/home" element={ <Home /> } />
-          <Route path="/about" element={ <About /> } />
+          <Route path="/service" element={ <Service /> } />
           <Route path="/contact" element={ <Contact /> } />
           <Route path="/feed" element={<Feed/>} />
-          <Route path="/create" element={ <CreateUser /> } />
+          <Route path='/createUser' element={ <CreateUser /> } />
         </Routes>
 
         <Footer/>

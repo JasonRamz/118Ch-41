@@ -1,10 +1,18 @@
-.footer{
-    background-color: #6a6a6a;
-    padding: 10px 0 10px 0;
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
 }
 
-.footer h3{
-    text-align: center;
-    color:white;
-    margin:0;
+.social-icons a {
+    color: #fff;
+    font-size: 24px;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #e4405f;
+    /* Change color to the appropriate brand color */
 }

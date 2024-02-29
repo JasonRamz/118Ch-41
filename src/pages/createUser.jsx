@@ -23,7 +23,7 @@ function CreateUser(){
         alert('Your Create a new user');
     }
     return (
-        <div className='create-user'>
+        <div className='create-user page'>
             <h1>Create new User</h1>
             <div>
                 <div>
@@ -46,7 +46,7 @@ function CreateUser(){
                     <textarea name='message' onChange={handleInput} rows={3}></textarea>
                 </div>
 
-                <button name='save'>Save Post</button>
+                <button name='save'>Create User</button>
             </div>
         </div>
     )

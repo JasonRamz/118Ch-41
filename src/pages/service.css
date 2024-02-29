@@ -1,0 +1,39 @@
+/* service.css */
+.service-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.service-button {
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.service-button h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.service-button p {
+    margin-bottom: 10px;
+}
+
+.service-button button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.service-button button:hover {
+    background-color: #45a049;
+}
