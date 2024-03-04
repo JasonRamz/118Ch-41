@@ -1,39 +1,87 @@
-/* service.css */
-.service-buttons {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+
+h2 {
+    margin-bottom: 20px;
 }
 
-.service-button {
-    width: 300px;
-    margin: 20px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.nav {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
     text-align: center;
 }
 
-.service-button h3 {
-    margin-top: 0;
-    color: #333;
+.nav-item {
+    display: inline-block;
+    margin-right: 10px;
 }
 
-.service-button p {
-    margin-bottom: 10px;
-}
-
-.service-button button {
-    background-color: #4caf50;
-    color: white;
-    border: none;
+.nav-li {
+    text-decoration: none;
     padding: 10px 20px;
-    border-radius: 4px;
+    color: #333;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    border: none;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s;
 }
 
-.service-button button:hover {
-    background-color: #45a049;
+.nav-li:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.search-container {
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.service-table {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.table-header {
+    display: flex;
+    background-color: #f2f2f2;
+    border-bottom: 1px solid #ccc;
+}
+
+.header-cell {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+}
+
+.service-item {
+    display: flex;
+    border-bottom: 1px solid #ccc;
+}
+
+.table-cell {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+}
+
+button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
 }

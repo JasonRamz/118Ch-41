@@ -27,6 +27,7 @@
 
 .cta-button:hover {
     background-color: #5b4878;
+    color: white;
 }
 
 .features {
@@ -177,19 +178,13 @@ textarea {
 }
 
 button {
-    background-color:#F5B0CB;
-    color: white;
+    color: rgb(0, 0, 0);
     border: none;
     padding: 10px 20px;
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
-
-button:hover {
-    background-color: #45a049;
-}
-
 
 @media (max-width: 1027px) {
     .welcome-img {
