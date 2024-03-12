@@ -19,7 +19,7 @@
     margin-left: 10px;
 }
 .brand a:hover {
-    color: #F9A826;
+    color: #39375B;
 }
 
 .nav-menu {
@@ -43,6 +43,5 @@
 }
 
 .nav-link:hover {
-    color: #F9A826;
-    /* Change to your desired hover color */
+    color: #39375B;
 }

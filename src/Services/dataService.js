@@ -17,6 +17,14 @@ class DataService{
         let response = await axios.post(this.serverUrl + "/api/user/", user);
         return response.data;
     }
+    async getCategories(){
+        let response = await axios.get(this.serverUrl + "/api/category/");
+        return response.data;
+    }
+    async getServices(){
+        let response = await axios.get(this.serverUrl + "/api/service/");
+        return response.data;
+    }
     
 }
 export default new DataService();

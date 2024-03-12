@@ -4,9 +4,10 @@ import Navbar from './components/navbar';
 import Footer from './components/footer';
 import Home from './pages/home';
 import Service from './pages/service';
-import Contact from './pages/contact';
+import Schedule from './pages/schedule';
 import Feed from './pages/feed';
 import CreateUser from './pages/createUser';
+import Cart from './pages/cart';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
@@ -21,7 +22,7 @@ function App() {
           <Route path="/" element={ <Home /> } />
           <Route path="/home" element={ <Home /> } />
           <Route path="/service" element={ <Service /> } />
-          <Route path="/contact" element={ <Contact /> } />
+          <Route path='/schedule/:id' element={ <Schedule /> } />
           <Route path="/feed" element={<Feed/>} />
           <Route path='/createUser' element={ <CreateUser /> } />
         </Routes>

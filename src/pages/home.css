@@ -11,15 +11,10 @@
 .welcome-img {
     display: flex;
     justify-content: center;
-    /* Set background image */
     background-image: url('/public/img/Welcome.png');
-    /* Set background size to cover the entire element */
     background-size: cover;
-    /* Set background position to center */
     background-position: center;
-    /* Set height to ensure background image is visible */
     height: 300px;
-    /* Adjust this value as needed */
     max-width: 100%;
     border: 2px solid #000;
     border-radius: 8px;
@@ -39,6 +34,7 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+
 }
 
 .feature {
@@ -122,7 +118,6 @@
     padding: 20px;
     margin-bottom: 20px;
     width: 300px;
-    /* Adjust as needed */
 }
 
 .testimonial-content {
@@ -196,14 +191,10 @@ button {
 
 @media (max-width: 768px) {
     .welcome-img {
-        /* Add your styles here for screens with a minimum width of 768px */
-        /* For example, you can adjust the height or padding */
         height: 150px;
         max-width: 90%;
-        /* Adjust as needed */
         padding-right: 50px;
         margin-right: 50px;
-        /* Adjust as needed */
     }
 
     .nav-menu {

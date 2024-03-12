@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import dataService from '../Services/dataService';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 import './service.css';
 
 function Service() {
@@ -14,10 +16,27 @@ function Service() {
         { name: "Classic Lash Extension Fill", details: "This service is usually booked 2 weeks after your full set was applied. If you come in for a fill appointment but have less than 50% of the lashes remaining, your appointment will be switched over to a full set.", cost: "$100", category: "Lashes" },
     ];
 
-    const [services, setServices] = useState(initialServices);
-    const [filteredServices, setFilteredServices] = useState(initialServices);
+    const [services, setServices] = useState([]);
+    const [filteredServices, setFilteredServices] = useState([]);
     const [selectedCategory, setSelectedCategory] = useState(null);
-    const [searchTerm, setSearchTerm] = useState('');
+    const [searchTerm, setSearchTerm] = useState('');    
+
+
+
+    async function loadData(){
+    const cats = await dataService.getCategories()
+    console.log(cats);
+    const srv = await dataService.getServices()
+    setServices(srv);
+    console.log(srv);
+    setFilteredServices(srv);
+
+}
+
+
+    useEffect(() => {
+        loadData()
+    }, []);
 
     useEffect(() => {
         const storedCategory = localStorage.getItem('selectedCategory');
@@ -38,16 +57,20 @@ function Service() {
 
     const renderService = (service, index) => (
         <li key={index} className="service-item">
-            <span className="table-cell">Service Name: {service.name}</span>
-            <span className="table-cell">Details: {service.details}</span>
-            <span className="table-cell">Cost: {service.cost}</span>
-            <span className="table-cell"><button>Book Now</button></span>
+            <span className="table-cell">{service.name}</span>
+            <span className="table-cell">Details: {service.detail}</span>
+            <span className="table-cell">Cost: {service.price}</span>
+            <span className="table-cell">
+                <Link to={"/schedule/" + service.id}>
+                    <button>Book Now</button>
+                </Link>
+            </span>
         </li>
     );
 
     const handleCategoryChange = (category) => {
         setSelectedCategory(category);
-        const filtered = category ? initialServices.filter(service => service.category === category) : initialServices;
+        const filtered = category ? services.filter(service => service.category === category) : services;
         setFilteredServices(filtered);
         setSearchTerm('');
     };
@@ -61,18 +84,18 @@ function Service() {
     };
 
     return (
-        <div className='page'>
+        <div className=' page gif'>
             <h2>Our Services</h2>
             <nav>
                 <ul className="nav justify-content-center">
                     <li className="nav-item">
-                        <button  className={selectedCategory === 'Nails' ? "nav-li active" : "nav-li"} onClick={() => handleCategoryChange('Nails')}>Nails</button>
+                        <button  className={selectedCategory === 'Nails' ? "nav-li active" : "nav-li"} onClick={() => handleCategoryChange(1)}>Nails</button>
                     </li>
                     <li className="nav-item">
-                        <button className={selectedCategory === 'Hair' ? "nav-li active" : "nav-li"} onClick={() => handleCategoryChange('Hair')}>Hair</button>
+                        <button className={selectedCategory === 'Hair' ? "nav-li active" : "nav-li"} onClick={() => handleCategoryChange(2)}>Hair</button>
                     </li>
                     <li className="nav-item">
-                        <button className={selectedCategory === 'Lashes' ? "nav-li active" : "nav-li"} onClick={() => handleCategoryChange('Lashes')}>Lashes</button>
+                        <button className={selectedCategory === 'Lashes' ? "nav-li active" : "nav-li"} onClick={() => handleCategoryChange(3)}>Lashes</button>
                     </li>
                 </ul>
             </nav>
@@ -92,3 +115,4 @@ function Service() {
 }
 
 export default Service;
+
